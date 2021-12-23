@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.search.SearchFragment">
 
     <RelativeLayout
         android:id="@+id/action_bar"
@@ -17,30 +16,36 @@
         android:padding="10dp"
         android:background="@color/white"
         android:elevation="6dp">
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_centerVertical="true"
-            android:layout_toStartOf="@+id/iv_search"
-            android:text="@string/title_home"
-            android:textColor="@color/text"
-            android:textSize="16sp"
-            android:textStyle="bold"/>
+
         <ImageView
-            android:id="@+id/iv_search"
+            android:id="@+id/iv_back"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
             android:padding="5dp"
-            android:src="@drawable/ic_search" />
+            android:src="@drawable/ic_back"/>
+
+        <EditText
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/iv_back"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_search"
+            android:textColorHint="@color/text_light"
+            android:textColor="@color/text"
+            android:textSize="16sp"
+            android:inputType="text"
+            android:lines="1"
+            android:background="@null"/>
+
     </RelativeLayout>
 
-
     <TextView
-        android:id="@+id/text_home"
+        android:id="@+id/text_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
