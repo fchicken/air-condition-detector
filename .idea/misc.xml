@@ -5,14 +5,16 @@
       <map>
         <entry key="app/src/main/res/drawable-anydpi/ic_back.xml" value="0.15104166666666666" />
         <entry key="app/src/main/res/drawable-anydpi/ic_search.xml" value="0.21944444444444444" />
+        <entry key="app/src/main/res/drawable/bottom_line.xml" value="0.28" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.21331521739130435" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.20742753623188406" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.29487967949929783" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.20742753623188406" />
+        <entry key="app/src/main/res/layout/item_air_status.xml" value="0.375" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
