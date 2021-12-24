@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_site_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/title_site_id"
+            android:textSize="12sp"
+            android:textColor="@color/text"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_site_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/title_site_name"
+            android:textSize="12sp"
+            android:textColor="@color/text"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_county"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/title_county"
+            android:textSize="12sp"
+            android:textColor="@color/text"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_pm25"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/title_pm25"
+            android:textSize="12sp"
+            android:textColor="@color/text"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/title_status"
+            android:textSize="12sp"
+            android:textColor="@color/text"
+            android:gravity="center"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/divider"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

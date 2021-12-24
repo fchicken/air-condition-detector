@@ -2,5 +2,12 @@
     <string name="app_name">AirConditionDetector</string>
     <string name="title_home">空氣污染</string>
     <string name="title_search">Search</string>
+
+    <string name="title_site_id">序號</string>
+    <string name="title_site_name">站名</string>
+    <string name="title_county">縣市</string>
+    <string name="title_pm25">PM 2.5</string>
+    <string name="title_status">狀態</string>
+
     <string name="hint_search">請輸入「站名」</string>
 </resources>
