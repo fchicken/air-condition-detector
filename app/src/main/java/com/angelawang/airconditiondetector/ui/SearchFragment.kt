@@ -92,6 +92,7 @@ class SearchFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        airStatusViewModel.searchQuery.value = ""
         binding = null
     }
 }
