@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.angelawang.airconditiondetector.ui.home.HomeFragment"
+        android:name="com.angelawang.airconditiondetector.ui.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/navigation_search"
-        android:name="com.angelawang.airconditiondetector.ui.search.SearchFragment"
+        android:name="com.angelawang.airconditiondetector.ui.SearchFragment"
         android:label="@string/title_search"
         tools:layout="@layout/fragment_search" />
 </navigation>

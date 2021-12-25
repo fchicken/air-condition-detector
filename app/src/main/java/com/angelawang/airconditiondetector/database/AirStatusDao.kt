@@ -2,6 +2,7 @@ package com.angelawang.airconditiondetector.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface AirStatusDao {
@@ -13,10 +14,10 @@ interface AirStatusDao {
     fun insertAll(airStatusList: List<AirStatus>)
 
     @Query("SELECT * FROM `air_status_table`")
-    fun getAll(): LiveData<List<AirStatus>>
+    fun getAll(): Flow<List<AirStatus>>
 
-    @Query("SELECT * FROM `air_status_table` WHERE `site_name` LIKE :query")
-    fun search(query: String): LiveData<List<AirStatus>>
+    @Query("SELECT * FROM `air_status_table` WHERE `site_name` LIKE '%' || :query || '%'")
+    fun search(query: String): Flow<List<AirStatus>>
 
 
 }

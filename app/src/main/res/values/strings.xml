@@ -9,5 +9,7 @@
     <string name="title_pm25">PM 2.5</string>
     <string name="title_status">狀態</string>
 
-    <string name="hint_search">請輸入「站名」</string>
+    <string name="search_hint">請輸入「站名」</string>
+    <string name="search_hint_message">輸入「站名」\n查詢該地區空汙資訊</string>
+    <string name="search_empty_result_message">找不到「%s」\n相關的空汙資訊</string>
 </resources>
