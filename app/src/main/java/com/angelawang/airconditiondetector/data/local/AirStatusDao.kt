@@ -1,17 +1,17 @@
-package com.angelawang.airconditiondetector.database
+package com.angelawang.airconditiondetector.data.local
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.angelawang.airconditiondetector.data.model.AirStatus
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface AirStatusDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(airStatus: AirStatus)
+    suspend fun insert(airStatus: AirStatus)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertAll(airStatusList: List<AirStatus>)
+    suspend fun insertAll(airStatusList: List<AirStatus>)
 
     @Query("SELECT * FROM `air_status_table`")
     fun getAll(): Flow<List<AirStatus>>

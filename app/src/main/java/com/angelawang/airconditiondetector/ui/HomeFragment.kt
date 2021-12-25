@@ -1,6 +1,8 @@
 package com.angelawang.airconditiondetector.ui
 
+import android.graphics.Typeface
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +12,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.angelawang.airconditiondetector.R
 import com.angelawang.airconditiondetector.databinding.FragmentHomeBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
 
@@ -42,10 +47,26 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        
         airStatusViewModel.getAllStatus().observe(viewLifecycleOwner, {list ->
             adapter?.setList(list)
         })
+
+        binding?.titleBar?.apply {
+            tvSiteId.typeface = Typeface.DEFAULT_BOLD
+            tvSiteName.typeface = Typeface.DEFAULT_BOLD
+            tvCounty.typeface = Typeface.DEFAULT_BOLD
+            tvPm25.typeface = Typeface.DEFAULT_BOLD
+            tvStatus.typeface = Typeface.DEFAULT_BOLD
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        GlobalScope.launch(Dispatchers.IO) {
+            airStatusViewModel.getAllStatusFromWeb()
+        }
     }
 
     override fun onDestroyView() {

@@ -1,4 +1,4 @@
-package com.angelawang.airconditiondetector
+package com.angelawang.airconditiondetector.ui
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView

@@ -1,5 +1,6 @@
 package com.angelawang.airconditiondetector.ui
 
+import android.graphics.Typeface
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -62,21 +63,28 @@ class SearchFragment : Fragment() {
 
         })
         airStatusViewModel.searchResult.observe(viewLifecycleOwner, {list ->
-            binding?.tvSearchMessage?.apply {
+            binding?.apply {
                 if (list.isEmpty()) {
-                    visibility = VISIBLE
+                    tvSearchMessage.visibility = VISIBLE
                     val query = airStatusViewModel.searchQuery.value
-                    text = when {
-                        query.isEmpty() -> {
-                            getString(R.string.search_hint_message)
-                        }
-                        else -> {
-                            String.format(getString(R.string.search_empty_result_message), query)
-                        }
+                    if (query.isEmpty()) {
+                        tvSearchMessage.text = getString(R.string.search_hint_message)
+                    } else {
+                        tvSearchMessage.text = String.format(getString(R.string.search_empty_result_message), query)
+                    }
+                    titleBar.apply {
+                        root.visibility = GONE
+                        tvSiteId.typeface = Typeface.DEFAULT_BOLD
+                        tvSiteName.typeface = Typeface.DEFAULT_BOLD
+                        tvCounty.typeface = Typeface.DEFAULT_BOLD
+                        tvPm25.typeface = Typeface.DEFAULT_BOLD
+                        tvStatus.typeface = Typeface.DEFAULT_BOLD
                     }
                 } else {
-                    visibility = GONE
+                    tvSearchMessage.visibility = GONE
+                    titleBar.root.visibility = VISIBLE
                 }
+
             }
             adapter?.setList(list)
         })

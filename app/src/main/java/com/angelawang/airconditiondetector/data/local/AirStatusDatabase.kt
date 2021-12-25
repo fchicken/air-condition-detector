@@ -1,11 +1,11 @@
-package com.angelawang.airconditiondetector.database
+package com.angelawang.airconditiondetector.data.local
 
 import android.content.Context
-import android.util.Log
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.angelawang.airconditiondetector.data.model.AirStatus
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 

@@ -1,17 +1,26 @@
 package com.angelawang.airconditiondetector.ui
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.*
-import com.angelawang.airconditiondetector.database.AirStatus
-import com.angelawang.airconditiondetector.database.AirStatusDatabase
-import com.angelawang.airconditiondetector.database.AirStatusRepository
+import com.angelawang.airconditiondetector.data.model.AirStatus
+import com.angelawang.airconditiondetector.data.AirStatusRepository
 import kotlinx.coroutines.flow.*
 
 class AirStatusViewModel(application: Application): AndroidViewModel(application) {
 
     private val repository: AirStatusRepository = AirStatusRepository(application)
     private val allStatus: LiveData<List<AirStatus>> = repository.getAll()
+
+    suspend fun getAllStatusFromWeb() {
+        
+        // Retrofit with coroutine will crash the app if there is no network
+        try {
+            repository.getAllFromWeb()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
     fun getAllStatus(): LiveData<List<AirStatus>> {
         return allStatus
     }

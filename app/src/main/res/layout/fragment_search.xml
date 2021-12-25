@@ -44,6 +44,16 @@
 
     </RelativeLayout>
 
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/item_air_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar"
+        android:layout_marginTop="5dp"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_search"
         android:layout_width="match_parent"
@@ -51,7 +61,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/action_bar"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_air_status"/>
 
@@ -62,7 +72,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/action_bar"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar"
         android:text="@string/search_hint_message"
         android:textColor="@color/text"
         android:textSize="14sp"
